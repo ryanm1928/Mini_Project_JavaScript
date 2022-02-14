@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "digital";
+  src: url("../digital-7.ttf") format("truetype");
+}
+
+body {
+  background-color: #790086;
+  background-image: linear-gradient(315deg, #3e9cdf 0%, #bd46ca 74%);
+  background-repeat: no-repeat;
+  height: 50rem;
+}
+
+label {
+  color: rgb(0, 0, 0);
+}
+.hide {
+  display: none;
+}
+#btn_hide,
+#btn_start,
+#reset {
+  background-color: #e600ff;
+  color: white;
+}
+
+#view_time {
+  font-size: 15.5vw;
+  font-family: "digital", sans-serif;
+  color: white;
+}
+@media (max-width: 564px) {
+  #btn_hide {
+    width: 100%;
+  }
+}

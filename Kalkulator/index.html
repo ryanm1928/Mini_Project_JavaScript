@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator JS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center p-5 pt-4">
+            <div class="col-12 col-md-8 col-lg-5">
+                <input type="text" id="layer" class="form-control" disabled>
+                <input type="text" id="layer2" class="form-control" disabled>
+            <table class="w-100">
+                <tr>
+                    <td><button onclick="getNumber('7')" >7</button></td>
+                    <td><button onclick="getNumber('8')" >8</button></td>
+                    <td><button onclick="getNumber('9')" >9</button></td>
+                    <td><button data-operator = "*" class="operator" onclick="getNumber('*')" >*</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="getNumber('4')" >4</button></td>
+                    <td><button onclick="getNumber('5')" >5</button></td>
+                    <td><button onclick="getNumber('6')" >6</button></td>
+                    <td><button data-operator = "-" class="operator" onclick="getNumber('-')" >-</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="getNumber('1')" >1</button></td>
+                    <td><button onclick="getNumber('2')" >2</button></td>
+                    <td><button onclick="getNumber('3')" >3</button></td>
+                    <td><button data-operator = "+" class="operator" onclick="getNumber('+')" >+</button></td>
+                </tr>
+                <tr>
+                <td><button onclick="getNumber('.')" >.</button></td>
+                    <td><button onclick="getNumber(0)">0</button></td>
+                    <td><button class="" onclick="clearLayer()">C</button></td>
+                    <td><button data-operator = "/" class="operator" onclick="getNumber('/')">/</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2" ><button class="" onclick="deleteNumber()">Del</button></td>
+                    <td colspan="2"><button class="" style="width:100%;" onclick="count()">=</button></td>
+                </tr>
+            </table>
+            <a href="" style="color: white;">View on Github</a>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/script.js"></script>
+</html>

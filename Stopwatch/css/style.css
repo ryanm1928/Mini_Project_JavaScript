@@ -1,0 +1,40 @@
+li {
+  font-size: 23px;
+  list-style: none;
+  padding: 0.5rem 1rem;
+  color: #212529;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+#view_timer {
+  font-size: 10vw;
+  background-repeat: no-repeat;
+}
+#start {
+  background-color: #ff3300;
+  color: white;
+}
+#start:hover {
+  background-color: #e02d00;
+}
+#reset {
+  background-color: rgb(255, 176, 157);
+  color: #e74504;
+}
+#lap {
+  background-color: rgb(255, 176, 157);
+  color: #e74504;
+}
+#resume {
+  background-color: #ff3300;
+  color: white;
+}
+#pause {
+  background-color: #ff3300;
+  color: white;
+}
+#miliDetik {
+  color: #ff3300;
+}

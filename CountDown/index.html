@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer JS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+        <a href="" style="color: rgb(255, 255, 255);">View on Github</a>
+    <center>
+        <h1 id="view_time" class="mb-5">
+            <span id="view_hours">00 :</span>
+            <span id="view_min">00 :</span>
+            <span id="view_second">00 </span>
+        </h1>
+    </center>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-6 col-md-5 col-lg-3 shadow card" >
+                <div id="input_timer" class="hide">
+                    <label for="">Hours:</label>
+                    <input class="form-control"  type="number" id="hours" min="0" max="23">
+                    <label for="">Minutes:</label>
+                    <input class="form-control" type="number" id="min" min="0" max="59">
+                    <label for="">Second:</label>
+                    <input class="form-control mb-3" type="number" id="second" min="0" max="59">
+                    <button onclick="start()" id="btn_start" class="btn w-100">Set Time</button>
+                    <button id="reset" class="btn w-100">Reset</button>
+                </div>
+                <button id="btn_hide" onclick="hide()" class="btn  mt-2 mb-2 w-100">Show Control</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+</body>
+<script src="js/script.js"></script>
+</html>

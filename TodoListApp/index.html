@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="icon/css/font-awesome.min.css">
+    <style>    
+    div{
+        display: inline;
+    }
+    span{
+        cursor: pointer;
+    }
+    .checkList{
+        text-decoration: line-through;
+        background-color: #B8FAC0;
+
+    }
+    .checkIcon{
+        opacity: 0;
+
+    }
+    .check{
+        opacity: 1;
+    }
+    .none{
+        display: none;
+    }
+    .list-group-item:hover{
+        background-color: #B8FAC0;
+    }
+    .list-group-item{
+        font-size: 20px;
+        
+    }
+    
+</style>
+</head>
+<body>
+    <a href="" style="color: rgb(0, 0, 0);">View on Github</a>
+    <center>
+         <h1>Todo List App</h1>
+    </center>
+    <div class="row justify-content-center mb-3 mt-4">
+        <div class="col-9 col-md-5 ">
+            <input type="text" id="input" class="form-control" placeholder="Masukan List">
+        </div>
+        <div class="col-2 col-md-1 ">
+            <button id="simpan" class="btn btn-primary w-100"><li class="fa fa-plus"></li></button>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-6">
+            <div class="list-group" id="list-group">
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    var i  = 0;
+document.getElementById('simpan').addEventListener('click', function() {
+    var input = document.getElementById('input');
+    var listGroup = document.getElementById("list-group");
+    var list =
+        `
+        <div onclick="checkList(this,${i++})" class="list-group-item d-flex justify-content-between align-items-center">
+            <div >
+                <span class="checkIcon text-success"><li class="fa fa-check"></li></span>
+                ${input.value}
+            </div>
+           
+            <span class="btn btn-danger" onclick="removeList(this)"><li class="fa fa-trash"></li></span> 
+        </div>
+
+        `;
+
+    listGroup.insertAdjacentHTML("beforebegin", list);
+    input.value  = "";
+
+});
+
+function removeList(el) {
+    el.parentElement.className = "none";
+}
+
+function checkList(el,i) {
+    var check = document.getElementsByClassName("checkIcon");
+    el.classList.toggle('checkList');
+    check[i].classList.toggle("check");
+    
+}
+
+
+</script>
