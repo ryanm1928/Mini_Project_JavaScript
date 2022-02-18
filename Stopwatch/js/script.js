@@ -17,7 +17,7 @@ document.getElementById("pause").classList.add("d-none");
 document.getElementById("resume").classList.add("d-none");
 function start() {
   miliDetik++;
-  if (miliDetik > 60) {
+  if (miliDetik > 99) {
     miliDetik = 0;
     detik++;
     if (detik > 59) {
@@ -53,7 +53,7 @@ document.getElementById("start").addEventListener("click", function () {
   document.getElementById("pause").classList.remove("d-none");
   document.getElementById("lap").classList.remove("d-none");
   document.getElementById("resume").classList.add("d-none");
-  interval = setInterval(start);
+  interval = setInterval(start,10);
 });
 
 document.getElementById("pause").addEventListener("click", function () {
